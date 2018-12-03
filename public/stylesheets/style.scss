@@ -17,8 +17,12 @@ body {
  
 }
 .hero .subtitle {
+  font-size: 22px;
   padding: 3rem 0;
   line-height: 1.5;
+  width:400px;
+  position: relative;
+  right:80px
 }
 .hero-head{
   background-color: rgba(0,0,0,0.5);
@@ -49,3 +53,4 @@ body {
   width: 600px;
   height:400px
 }
+
