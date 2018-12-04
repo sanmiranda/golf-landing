@@ -10,8 +10,10 @@ const logger       = require('morgan');
 const path         = require('path');
 
 
+
+
 mongoose
-  .connect('mongodb://localhost/golfapp', {useNewUrlParser: true})
+  .connect(process.env.db, {useNewUrlParser: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
@@ -53,6 +55,7 @@ app.locals.title = 'Express - Generated with IronGenerator';
 
 const index = require('./routes/index');
 app.use('/', index);
+
 
 
 module.exports = app;
